@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.min.css?_v=20230918182348">
+    <link rel="stylesheet" href="assets/css/style.min.css?_v=20230919191943">
     <title>LOANSQUICKNOW</title>
 </head>
 <body>
@@ -56,15 +56,24 @@
                 <div class="range">
     <div class="range__wrapper">
         <div class="range__input">
-            <input type="text" value="300$">
+            <input type="number" min="100" max="999" value="300">
+            <span class="notify">Не допустипое значение</span>
         </div>
+        <p class="test-text"></p>
         <div class="range__slider">
-            <button>
+            <input type="range" class="customrange " min="100" max="999" data-start="300">
+            <div class="range-sliderthumb">
                 <img src="assets/img/icons/range-icon.png" alt="range icon">
-            </button>
+            </div>
         </div>
+
+        <!-- <div class="range__slider">
+            <button>
+            </button>
+        </div> -->
     </div>
 </div>
+
             </div>
             <button class="btn">ПОЛУЧИТЬ</button>
             <p>или</p>
@@ -406,7 +415,65 @@
         </div>
     </div>
 </section>
-
+            <div class="our-products">
+    <div class="our-products__wrapper container">
+        <h2>Наши продукты</h2>
+        <div class="our-products-slider">
+            <div class="our-products-slider__bg"></div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="our-products-item" data-swiper-parallax-rotate="5">
+    <span class="swiper-slide__num">1/6</span>
+    <h3>Краткосрочные займы</h3>
+    <div class="our-products-item__text">
+        <p>Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.</p>
+    </div>
+    <button class="btn btn--no-shadow">ПОЛУЧИТЬ</button>
+</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="our-products-item" data-swiper-parallax-rotate="5">
+    <span class="swiper-slide__num">1/6</span>
+    <h3>Краткосрочные займы</h3>
+    <div class="our-products-item__text">
+        <p>Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.</p>
+    </div>
+    <button class="btn btn--no-shadow">ПОЛУЧИТЬ</button>
+</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="our-products-item" data-swiper-parallax-rotate="5">
+    <span class="swiper-slide__num">1/6</span>
+    <h3>Краткосрочные займы</h3>
+    <div class="our-products-item__text">
+        <p>Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.Займы с небольшой суммой на короткий срок, обычно до зарплаты.</p>
+    </div>
+    <button class="btn btn--no-shadow">ПОЛУЧИТЬ</button>
+</div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <svg width="81" height="9" viewBox="0 0 81 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.646446 4.14449C0.451187 4.33975 0.451187 4.65633 0.646446 4.85159L3.82843 8.03357C4.02369 8.22884 4.34027 8.22884 4.53554 8.03357C4.7308 7.83831 4.7308 7.52173 4.53554 7.32647L1.70711 4.49804L4.53554 1.66961C4.7308 1.47435 4.7308 1.15777 4.53554 0.962506C4.34027 0.767244 4.02369 0.767244 3.82843 0.962506L0.646446 4.14449ZM81 3.99805L1 3.99804L1 4.99804L81 4.99805L81 3.99805Z" fill="black"/>
+                    </svg>    
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="81" height="9" viewBox="0 0 81 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80.3536 4.8516C80.5488 4.65634 80.5488 4.33976 80.3536 4.14449L77.1716 0.962513C76.9763 0.767251 76.6597 0.767251 76.4645 0.962513C76.2692 1.15778 76.2692 1.47436 76.4645 1.66962L79.2929 4.49805L76.4645 7.32647C76.2692 7.52174 76.2692 7.83832 76.4645 8.03358C76.6597 8.22884 76.9763 8.22884 77.1716 8.03358L80.3536 4.8516ZM0 4.99805H80V3.99805H0V4.99805Z" fill="black"/>
+                    </svg>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             
 
 <section class="blog">
@@ -417,10 +484,16 @@
 
 <div class="blog-item">
     <div class="blog-item__img">
-        <img src="assets/img/blog/1.png" alt="Отличия банковских займов от кредитных карт">
+        <a href="blog.html">
+            <img src="assets/img/blog/1.png" alt="Отличия банковских займов от кредитных карт">
+        </a>
     </div>
     <div class="blog-item__content">
-        <h4>"Отличия банковских займов от кредитных карт: Какой выбрать?"</h4>
+        <h4>
+            <a href="/blog.html">
+                "Отличия банковских займов от кредитных карт: Какой выбрать?"
+            </a>
+        </h4>
         <div class="blog-item__text">
             <p>Банковские займы и кредитные карты предоставляют разные способы доступа к дополнительным финансовым средствам, и выбор между ними зависит от ваших финансовых потребностей и личных предпочтений. </p>
         </div>
@@ -430,10 +503,16 @@
 
 <div class="blog-item">
     <div class="blog-item__img">
-        <img src="assets/img/blog/2.png" alt="Отличия банковских займов от кредитных карт">
+        <a href="blog.html">
+            <img src="assets/img/blog/2.png" alt="Отличия банковских займов от кредитных карт">
+        </a>
     </div>
     <div class="blog-item__content">
-        <h4>"Отличия банковских займов от кредитных карт: Какой выбрать?"</h4>
+        <h4>
+            <a href="/blog.html">
+                "Отличия банковских займов от кредитных карт: Какой выбрать?"
+            </a>
+        </h4>
         <div class="blog-item__text">
             <p>Банковские займы и кредитные карты предоставляют разные способы доступа к дополнительным финансовым средствам, и выбор между ними зависит от ваших финансовых потребностей и личных предпочтений. </p>
         </div>
@@ -443,10 +522,16 @@
 
 <div class="blog-item">
     <div class="blog-item__img">
-        <img src="assets/img/blog/3.png" alt="Отличия банковских займов от кредитных карт">
+        <a href="blog.html">
+            <img src="assets/img/blog/3.png" alt="Отличия банковских займов от кредитных карт">
+        </a>
     </div>
     <div class="blog-item__content">
-        <h4>"Отличия банковских займов от кредитных карт: Какой выбрать?"</h4>
+        <h4>
+            <a href="/blog.html">
+                "Отличия банковских займов от кредитных карт: Какой выбрать?"
+            </a>
+        </h4>
         <div class="blog-item__text">
             <p>Банковские займы и кредитные карты предоставляют разные способы доступа к дополнительным финансовым средствам, и выбор между ними зависит от ваших финансовых потребностей и личных предпочтений. </p>
         </div>
@@ -690,10 +775,158 @@
         </div>
     </div>
 </div>
+            
+
+<section class="text-block">
+    <div class="text-block__wrapper container">
+        <p>
+            <b>APR Disclosure.</b> Some states have laws limiting the Annual Percentage Rate (APR) that a lender can charge you. APRs for cash advance loans range from 200% to 1386%, APRs for installment loans range from 6.63% to 485%, and APRs for personal loans range from 4.99% to 450% and vary by lender. Loans from a state that has no limiting laws or loans from a bank not governed by state laws may have an even higher APR. The APR is the rate at which your loan accrues interest and is based upon the amount, cost and term of your loan, repayment amounts and timing of payments. Lenders are legally required to show you the APR and other terms of your loan before you execute a loan agreement. APR rates are subject to change.
+            <br>
+            Material Disclosure. The operator of this website is not a lender, loan broker or agent for any lender or loan broker. We are an advertising referral service to qualified participating lenders that may be able to provide amounts between $100 and $1,000 for cash advance loans, up to $5,000 for installment loans, and up to $35,000 for personal loans. Not all lenders can provide these amounts and there is no guarantee that you will be accepted by an independent, participating lender. This service does not constitute an offer or solicitation for loan products which are prohibited by any state law. This is not a solicitation for a particular loan and is not an offer to lend. We do not endorse or charge you for any service or product. Any compensation received is paid by participating lenders and only for advertising services provided. This service and offer are void where prohibited. We do not control and are not responsible for the actions of any lender. We do not have access to the full terms of your loan, including APR. For details, questions or concerns regarding your loan please contact your lender directly. Only your lender can provide you with information about your specific loan terms, their current rates and charges, renewal, payments and the implications for non-payment or skipped payments. The registration information submitted by you on this website will be shared with one or more participating lenders. You are under no obligation to use our service to initiate contact with a lender, register for credit or any loan product, or accept a loan from a participating lender. Cash transfer times and repayment terms vary between lenders. Repayment terms may be regulated by state and local laws. Some faxing may be required. Be sure to review our FAQs for additional information on issues such as credit and late payment implications. These disclosures are provided to you for information purposes only and should not be considered legal advice. Use of this service is subject to this site’s Terms of Use and Privacy Policy.
+        </p>
+        <p>
+            <b>Exclusions.</b> Residents of some states may not be eligible for some or all short-term, small-dollar loans. Residents of Arkansas, New York, New Hampshire, Vermont and West Virginia are not eligible to use this website or service. The states serviced by this website may change from time to time, without notice.
+        </p>
+        <p>
+            <b>Credit Implications.</b> The operator of this website does not make any credit decisions. Independent, participating lenders that you might be connected with may perform credit checks with credit reporting bureaus or obtain consumer reports, typically through alternative providers to determine credit worthiness, credit standing and/or credit capacity. By submitting your information, you agree to allow participating lenders to verify your information and check your credit. Loans provided by independent, participating lenders in our network are designed to provide cash to you to be repaid within a short amount of time. The short-term loans are not a solution for long-term debt and credit difficulties. Only borrow an amount that can be repaid on the date of your next pay period. Consider seeking professional advice regarding your financial needs, risks and alternatives to short-term loans. Late Payments of loans may result in additional fees or collection activities, or both. Each lender has their own terms and conditions, please review their policies for further information. Nonpayment of credit could result in collection activities. Every lender has its own renewal policy, which may differ from lender to lender. Please review your lender’s renewal policy.
+        </p>
+    
+    </div>
+</section>
+            
+<section class="other-sum">
+    <div class="other-sum__wrapper container">
+        <h2>Другие суммы</h2>
+        <div class="other-sum__content">
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+            <a href="#" class="sum-item">100$</a>
+        </div>
+    </div>
+</section>
         </main>
+        <footer class="footer">
+    <div class="footer__wrapper container">
+        <div class="footer__logo">
+            <a href="/" class="logo">
+                <img src="assets/img/logo.svg" alt="LOANSQUICKNOW">
+            </a>
+        </div>
+        <div class="footer__nav">
+            <a href="contacts.html">Контакты</a>
+            <a href="#">Политика конфиданциальности</a>
+            <a href="#">Пользовательское соглашение</a>
+            <a href="#">Сookie</a>
+        </div>
+        <div class="footer__stores">
+            <div class="stores">
+    <a href="#">
+        <img src="assets/img/app-store.svg" alt="app store">
+    </a>
+    <a href="#">
+        <img src="assets/img/google-play.svg" alt="google play">
+    </a>
+</div>
+        </div>
+        <div class="footer__socials">
+            <div class="socials socials--negative">
+                <a href="#">
+                    <img src="assets/img/socials/inst.svg" alt="instagram">
+                </a>
+                <a href="#">
+                    <img src="assets/img/socials/tw.svg" alt="twitter">
+                </a>
+                <a href="#">
+                    <img src="assets/img/socials/f.svg" alt="facebook">
+                </a>
+            </div>
+        </div>
+        <div class="footer__footer">
+            <p>Copyright ©2023 Домен®. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
 
+        
+<div class="modal" id="our-products">
+    <div class="modal__wrapper container">
+        <div class="modal-close"></div>
+        <div class="modal__content">
+            <form action="/" class="our-products-form">
+                <div class="our-products-form__list">
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>Bad Credit Loans</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>Cash Advances</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>Emergency Cash Loans</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list" checked>
+                        <span>Fast Cash</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>Installment Loans</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>No Credit Check Loans</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>Same Day Loans</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>Title Loans Near Me</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="our-product-list">
+                        <span>Urgent Loans For Bad Credit</span>
+                    </label>
+                </div>
+                <div class="range">
+    <div class="range__wrapper">
+        <div class="range__input">
+            <input type="number" min="100" max="999" value="300">
+            <span class="notify">Не допустипое значение</span>
+        </div>
+        <p class="test-text"></p>
+        <div class="range__slider">
+            <input type="range" class="customrange " min="100" max="999" data-start="300">
+            <div class="range-sliderthumb">
+                <img src="assets/img/icons/range-icon.png" alt="range icon">
+            </div>
+        </div>
+
+        <!-- <div class="range__slider">
+            <button>
+            </button>
+        </div> -->
+    </div>
+</div>
+
+                <button type="submit" class="btn btn--no-shadow">ПОЛУЧИТЬ</button>
+            </form>
+        </div>
+    </div>
+</div>
     </div>    
-
-    <script src="assets/js/app.min.js?_v=20230918182348"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20230919191943"></script>
+    <script src="assets/js/app.min.js?_v=20230919191943"></script>
 </body>
 </html>
