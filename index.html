@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.min.css?_v=20230919191943">
+    <link rel="stylesheet" href="assets/css/style.min.css?_v=20230920184641">
     <title>LOANSQUICKNOW</title>
 </head>
 <body>
@@ -17,12 +17,12 @@
                 </a>
             </div>
             <div class="header__location">
-                <div class="user-location">
+                <a href="#modal/modal-cities-form" class="user-location">
                     <span class="user-location__flag">
                         <img src="assets/img/flags/us.png" alt="usa">
                     </span>
                     <span>Ваше местоположение</span>
-                </div>
+                </a>
             </div>
         </div>
         <div class="header__right">
@@ -33,6 +33,9 @@
             </nav>
             <button class="btn btn--no-shadow">ПОЛУЧИТЬ</button>
         </div>
+        <a class="burger-icon" href="#modal/burger-menu">
+            <span></span>
+        </a>
     </div>
     
 </header>
@@ -223,10 +226,16 @@
         <div class="request__content">
             <div class="request__row">
                 <div class="ellipse"></div>
-                <img class="person-bg" src="assets/img/people/request/1.png" alt="">
+                <picture class="person-bg" >
+                    <source srcset="assets/img/people/request/1-mob.png" media="(max-width: 700px)">
+                    <source srcset="assets/img/people/request/1-table.png" media="(max-width: 1200px)">
+                    <img src="assets/img/people/request/1.png" alt="">
+                </picture>
                 <div class="request-item">
     <picture>
-        <img src="assets/img/spot/decstop/1.png" alt="spot">
+        <source srcset="assets/img/spot/mobile/1.svg" media="(max-width: 700px)"/>
+        <source srcset="assets/img/spot/table/1.svg" media="(max-width: 1200px)"/>
+        <img src="assets/img/spot/decstop/1.svg" alt="spot">
     </picture>
     <div class="request-item__wrapper">
         <h3>Заполните анкету онлайн</h3>
@@ -241,10 +250,16 @@
             </div>
             <div class="request__row">
                 <div class="ellipse"></div>
-                <img class="person-bg" src="assets/img/people/request/2.png" alt="">
+                <picture class="person-bg" >
+                    <source srcset="assets/img/people/request/2-mob.png" media="(max-width: 700px)">
+                    <source srcset="assets/img/people/request/2-table.png" media="(max-width: 1200px)">
+                    <img src="assets/img/people/request/2.png" alt="">
+                </picture>
                 <div class="request-item">
     <picture>
-        <img src="assets/img/spot/decstop/2.png" alt="spot">
+        <source srcset="assets/img/spot/mobile/2.svg" media="(max-width: 700px)"/>
+        <source srcset="assets/img/spot/table/2.svg" media="(max-width: 1200px)"/>
+        <img src="assets/img/spot/decstop/2.svg" alt="spot">
     </picture>
     <div class="request-item__wrapper">
         <h3>Мы свяжем вас с кредитором</h3>
@@ -260,10 +275,16 @@
             </div>
             <div class="request__row">
                 <div class="ellipse"></div>
-                <img class="person-bg" src="assets/img/people/request/3.png" alt="">
+                <picture class="person-bg" >
+                    <source srcset="assets/img/people/request/3-mob.png" media="(max-width: 700px)">
+                    <source srcset="assets/img/people/request/3-table.png" media="(max-width: 1200px)">
+                    <img src="assets/img/people/request/3.png" alt="">
+                </picture>
                 <div class="request-item">
     <picture>
-        <img src="assets/img/spot/decstop/3.png" alt="spot">
+        <source srcset="assets/img/spot/mobile/3.svg" media="(max-width: 700px)"/>
+        <source srcset="assets/img/spot/table/3.svg" media="(max-width: 1200px)"/>
+        <img src="assets/img/spot/decstop/3.svg" alt="spot">
     </picture>
     <div class="request-item__wrapper">
         <h3>Получение денег</h3>
@@ -857,7 +878,7 @@
 
         
 <div class="modal" id="our-products">
-    <div class="modal__wrapper container">
+    <div class="modal__wrapper ">
         <div class="modal-close"></div>
         <div class="modal__content">
             <form action="/" class="our-products-form">
@@ -925,8 +946,116 @@
         </div>
     </div>
 </div>
+        
+<div class="modal" id="modal-cities-form">
+    <div class="modal__wrapper ">
+        <div class="modal-close"></div>
+        <div class="modal__content">
+            <form action="/" class="cities-form">
+                <div class="cities-select">
+                    <div class="cities-select__title acc-title">
+                        <input type="text" placeholder="Выберите штат">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 15L12 9L6 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="cities-select__body acc-body">
+                        <div>
+                            <label>
+                                <span>Айдахо</span>
+                                <input type="radio" name="cities-radio">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Айова</span>
+                                <input type="radio" checked name="cities-radio">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Алабама</span>
+                                <input type="radio" name="cities-radio">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Айдахо</span>
+                                <input type="radio" name="cities-radio">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Алабама</span>
+                                <input type="radio" name="cities-radio">
+                                <span class="check"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="cities-select">
+                    <div class="cities-select__title acc-title">
+                        <input type="text" placeholder="Выберите город">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 15L12 9L6 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="cities-select__body acc-body">
+                        <div>
+                            <label>
+                                <span>Бойсе</span>
+                                <input type="radio" name="cities-radio-2">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Нампа</span>
+                                <input type="radio" checked name="cities-radio-2">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Меридиан</span>
+                                <input type="radio" name="cities-radio-2">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Де-Мойн</span>
+                                <input type="radio" name="cities-radio-2">
+                                <span class="check"></span>
+                            </label>
+                            <label>
+                                <span>Алабама</span>
+                                <input type="radio" name="cities-radio-2">
+                                <span class="check"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button type="submit" class="btn btn--no-shadow">ПРИМЕНИТЬ</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+        
+<div class="modal" id="burger-menu">
+    <div class="modal__wrapper">
+        <div class="modal-close"></div>
+        <div class="modal__content">
+            <div class="burger-menu">
+                <nav>
+                    <a href="#modal/our-products">Наши продукты</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="blog.html">Блог</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
     </div>    
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20230919191943"></script>
-    <script src="assets/js/app.min.js?_v=20230919191943"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20230920184641"></script>
+    <script src="assets/js/app.min.js?_v=20230920184641"></script>
 </body>
 </html>
