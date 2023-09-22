@@ -895,7 +895,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 .cities-select__body label:last-child {
