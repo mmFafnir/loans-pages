@@ -1353,6 +1353,7 @@ a {
 
 .request {
   padding-top: 144px;
+  padding-bottom: 15px;
   overflow: hidden;
 }
 
@@ -2142,7 +2143,7 @@ section.text-block p {
   }
 
   .our-products-slider__nav {
-    bottom: -90px;
+    bottom: -70px;
     right: 20px;
     height: 40px;
     position: absolute;
@@ -2838,6 +2839,10 @@ section.text-block p {
 
   .faq .accordion-item p {
     font-size: 14px;
+  }
+
+  .faq .accordion-item__body > div {
+    padding-top: 15px;
   }
 
   .cities h2 {
