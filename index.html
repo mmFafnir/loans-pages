@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.min.css?_v=20230920184641">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/simplebar@latest/dist/simplebar.css?_v=20230922100956"
+    />
+    <link rel="stylesheet" href="assets/css/style.min.css?_v=20230922100956">
     <title>LOANSQUICKNOW</title>
 </head>
 <body>
@@ -26,7 +30,7 @@
             </div>
         </div>
         <div class="header__right">
-            <nav>
+            <nav class="adaptive-block" data-pos="beforeend" data-to=".burger-menu" data-width="1025">
                 <a href="#modal/our-products">Наши продукты</a>
                 <a href="contacts.html">Контакты</a>
                 <a href="blog.html">Блог</a>
@@ -227,13 +231,13 @@
             <div class="request__row">
                 <div class="ellipse"></div>
                 <picture class="person-bg" >
-                    <source srcset="assets/img/people/request/1-mob.png" media="(max-width: 700px)">
+                    <source srcset="assets/img/people/request/1-mob.png" media="(max-width: 1000px)">
                     <source srcset="assets/img/people/request/1-table.png" media="(max-width: 1200px)">
                     <img src="assets/img/people/request/1.png" alt="">
                 </picture>
                 <div class="request-item">
     <picture>
-        <source srcset="assets/img/spot/mobile/1.svg" media="(max-width: 700px)"/>
+        <source srcset="assets/img/spot/mobile/1.svg" media="(max-width: 600px)"/>
         <source srcset="assets/img/spot/table/1.svg" media="(max-width: 1200px)"/>
         <img src="assets/img/spot/decstop/1.svg" alt="spot">
     </picture>
@@ -251,13 +255,13 @@
             <div class="request__row">
                 <div class="ellipse"></div>
                 <picture class="person-bg" >
-                    <source srcset="assets/img/people/request/2-mob.png" media="(max-width: 700px)">
+                    <source srcset="assets/img/people/request/2-mob.png" media="(max-width: 1000px)">
                     <source srcset="assets/img/people/request/2-table.png" media="(max-width: 1200px)">
                     <img src="assets/img/people/request/2.png" alt="">
                 </picture>
                 <div class="request-item">
     <picture>
-        <source srcset="assets/img/spot/mobile/2.svg" media="(max-width: 700px)"/>
+        <source srcset="assets/img/spot/mobile/2.svg" media="(max-width: 600px)"/>
         <source srcset="assets/img/spot/table/2.svg" media="(max-width: 1200px)"/>
         <img src="assets/img/spot/decstop/2.svg" alt="spot">
     </picture>
@@ -276,13 +280,13 @@
             <div class="request__row">
                 <div class="ellipse"></div>
                 <picture class="person-bg" >
-                    <source srcset="assets/img/people/request/3-mob.png" media="(max-width: 700px)">
+                    <source srcset="assets/img/people/request/3-mob.png" media="(max-width: 1000px)">
                     <source srcset="assets/img/people/request/3-table.png" media="(max-width: 1200px)">
                     <img src="assets/img/people/request/3.png" alt="">
                 </picture>
                 <div class="request-item">
     <picture>
-        <source srcset="assets/img/spot/mobile/3.svg" media="(max-width: 700px)"/>
+        <source srcset="assets/img/spot/mobile/3.svg" media="(max-width: 600px)"/>
         <source srcset="assets/img/spot/table/3.svg" media="(max-width: 1200px)"/>
         <img src="assets/img/spot/decstop/3.svg" alt="spot">
     </picture>
@@ -481,15 +485,17 @@
                 <div class="swiper-pagination"></div>
             
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev">
-                    <svg width="81" height="9" viewBox="0 0 81 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.646446 4.14449C0.451187 4.33975 0.451187 4.65633 0.646446 4.85159L3.82843 8.03357C4.02369 8.22884 4.34027 8.22884 4.53554 8.03357C4.7308 7.83831 4.7308 7.52173 4.53554 7.32647L1.70711 4.49804L4.53554 1.66961C4.7308 1.47435 4.7308 1.15777 4.53554 0.962506C4.34027 0.767244 4.02369 0.767244 3.82843 0.962506L0.646446 4.14449ZM81 3.99805L1 3.99804L1 4.99804L81 4.99805L81 3.99805Z" fill="black"/>
-                    </svg>    
-                </div>
-                <div class="swiper-button-next">
-                    <svg width="81" height="9" viewBox="0 0 81 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M80.3536 4.8516C80.5488 4.65634 80.5488 4.33976 80.3536 4.14449L77.1716 0.962513C76.9763 0.767251 76.6597 0.767251 76.4645 0.962513C76.2692 1.15778 76.2692 1.47436 76.4645 1.66962L79.2929 4.49805L76.4645 7.32647C76.2692 7.52174 76.2692 7.83832 76.4645 8.03358C76.6597 8.22884 76.9763 8.22884 77.1716 8.03358L80.3536 4.8516ZM0 4.99805H80V3.99805H0V4.99805Z" fill="black"/>
-                    </svg>    
+                <div class="our-products-slider__nav">
+                    <div class="swiper-button-prev">
+                        <svg width="81" height="9" viewBox="0 0 81 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.646446 4.14449C0.451187 4.33975 0.451187 4.65633 0.646446 4.85159L3.82843 8.03357C4.02369 8.22884 4.34027 8.22884 4.53554 8.03357C4.7308 7.83831 4.7308 7.52173 4.53554 7.32647L1.70711 4.49804L4.53554 1.66961C4.7308 1.47435 4.7308 1.15777 4.53554 0.962506C4.34027 0.767244 4.02369 0.767244 3.82843 0.962506L0.646446 4.14449ZM81 3.99805L1 3.99804L1 4.99804L81 4.99805L81 3.99805Z" fill="black"/>
+                        </svg>    
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg width="81" height="9" viewBox="0 0 81 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M80.3536 4.8516C80.5488 4.65634 80.5488 4.33976 80.3536 4.14449L77.1716 0.962513C76.9763 0.767251 76.6597 0.767251 76.4645 0.962513C76.2692 1.15778 76.2692 1.47436 76.4645 1.66962L79.2929 4.49805L76.4645 7.32647C76.2692 7.52174 76.2692 7.83832 76.4645 8.03358C76.6597 8.22884 76.9763 8.22884 77.1716 8.03358L80.3536 4.8516ZM0 4.99805H80V3.99805H0V4.99805Z" fill="black"/>
+                        </svg>    
+                    </div>
                 </div>
             </div>
         </div>
@@ -962,30 +968,30 @@
                         </span>
                     </div>
                     <div class="cities-select__body acc-body">
-                        <div>
+                        <div data-simplebar>
                             <label>
                                 <span>Айдахо</span>
-                                <input type="radio" name="cities-radio">
+                                <input value="Айдахо" type="radio" name="cities-radio">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Айова</span>
-                                <input type="radio" checked name="cities-radio">
+                                <input value="Айова" type="radio" checked name="cities-radio">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Алабама</span>
-                                <input type="radio" name="cities-radio">
+                                <input value="Алабама" type="radio" name="cities-radio">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Айдахо</span>
-                                <input type="radio" name="cities-radio">
+                                <input value="Айдахо" type="radio" name="cities-radio">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Алабама</span>
-                                <input type="radio" name="cities-radio">
+                                <input value="Алабама" type="radio" name="cities-radio">
                                 <span class="check"></span>
                             </label>
                         </div>
@@ -1001,30 +1007,30 @@
                         </span>
                     </div>
                     <div class="cities-select__body acc-body">
-                        <div>
+                        <div  data-simplebar>
                             <label>
                                 <span>Бойсе</span>
-                                <input type="radio" name="cities-radio-2">
+                                <input value="Бойсе" type="radio" name="cities-radio-2">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Нампа</span>
-                                <input type="radio" checked name="cities-radio-2">
+                                <input value="Нампа" type="radio" checked name="cities-radio-2">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Меридиан</span>
-                                <input type="radio" name="cities-radio-2">
+                                <input value="Меридиан" type="radio" name="cities-radio-2">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Де-Мойн</span>
-                                <input type="radio" name="cities-radio-2">
+                                <input value="Де-Мойн" type="radio" name="cities-radio-2">
                                 <span class="check"></span>
                             </label>
                             <label>
                                 <span>Алабама</span>
-                                <input type="radio" name="cities-radio-2">
+                                <input value="Алабама" type="radio" name="cities-radio-2">
                                 <span class="check"></span>
                             </label>
                         </div>
@@ -1045,17 +1051,14 @@
         <div class="modal-close"></div>
         <div class="modal__content">
             <div class="burger-menu">
-                <nav>
-                    <a href="#modal/our-products">Наши продукты</a>
-                    <a href="contacts.html">Контакты</a>
-                    <a href="blog.html">Блог</a>
-                </nav>
+
             </div>
         </div>
     </div>
 </div>
     </div>    
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20230920184641"></script>
-    <script src="assets/js/app.min.js?_v=20230920184641"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js?_v=20230922100956"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20230922100956"></script>
+<script src="assets/js/app.min.js?_v=20230922100956"></script>
 </body>
 </html>
