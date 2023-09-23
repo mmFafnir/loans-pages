@@ -337,9 +337,9 @@ a {
   background-color: #73A7FC;
   color: #fff;
   border-radius: 16px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -491,11 +491,14 @@ a {
   overflow: auto;
 }
 
+.modal.no-header .modal__wrapper {
+  margin-top: 50px;
+}
+
 .modal__wrapper {
   overflow: hidden;
   padding: 39px 20px;
   margin: 0px 40px;
-  margin-top: 126px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 1260px;
           flex: 0 1 1260px;
@@ -509,6 +512,7 @@ a {
   -webkit-transform: translateY(100px);
       -ms-transform: translateY(100px);
           transform: translateY(100px);
+  margin-top: 126px;
 }
 
 .modal__content {
@@ -531,13 +535,23 @@ a {
   font-weight: 700 !important;
 }
 
-#popup-get .modal__content {
-  height: 600px;
-}
-
 #popup-get .modal__content iframe {
   width: 100%;
   height: 100%;
+}
+
+#popup-get #omForm-root {
+  margin-top: 0;
+}
+
+#popup-get #omForm-root > div {
+  min-height: auto !important;
+}
+
+#popup-get .omForm-wrapper {
+  height: auto !important;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .breadcrumbs {
@@ -581,13 +595,13 @@ a {
   display: none;
 }
 
-.anim-opacity {
+.__anim-item .anim-opacity {
   opacity: 0;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
-.anim-scale {
+.__anim-item .anim-scale {
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
@@ -598,7 +612,7 @@ a {
           transition-duration: 0.3s;
 }
 
-.anim-show {
+.__anim-item .anim-show {
   -webkit-transform: translate(0px, 50px);
       -ms-transform: translate(0px, 50px);
           transform: translate(0px, 50px);
@@ -607,7 +621,7 @@ a {
           transition-duration: 0.3s;
 }
 
-.anim-show_left {
+.__anim-item .anim-show_left {
   -webkit-transform: translate(-50px, 0px);
       -ms-transform: translate(-50px, 0px);
           transform: translate(-50px, 0px);
@@ -616,7 +630,7 @@ a {
           transition-duration: 0.3s;
 }
 
-.anim-show_right {
+.__anim-item .anim-show_right {
   -webkit-transform: translate(50px, 0px);
       -ms-transform: translate(50px, 0px);
           transform: translate(50px, 0px);
@@ -950,6 +964,22 @@ a {
 
 .our-products-item .btn {
   color: #000;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.our-products-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .our-products-form__list {
@@ -1122,6 +1152,11 @@ a {
   position: relative;
   z-index: 100;
   background-color: #fff;
+}
+
+.header.modal-open {
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2509803922);
 }
 
 .header__wrapper {
@@ -1328,6 +1363,7 @@ a {
 
 .first-screen__wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .first-screen h1 {
@@ -1466,10 +1502,14 @@ a {
 .range__slider input {
   cursor: pointer;
   position: absolute;
-  left: -20px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 1;
   width: calc(100% + 40px);
-  height: 100%;
+  height: 224%;
   opacity: 0;
 }
 
@@ -2427,10 +2467,10 @@ section.text-block p {
     text-align: center;
   }
 
-  h2.anim-show_left,
-  .anim-show_left h2,
-  h2.anim-show_right,
-  .anim-show_right h2 {
+  .__anim-item h2.anim-show_left,
+  .__anim-item .anim-show_left h2,
+  .__anim-item h2.anim-show_right,
+  .__anim-item .anim-show_right h2 {
     -webkit-transform: translate(0px, 50px);
         -ms-transform: translate(0px, 50px);
             transform: translate(0px, 50px);
@@ -2783,6 +2823,10 @@ section.text-block p {
 
   .first-screen__content > p {
     margin-bottom: 16px;
+  }
+
+  .range__slider input {
+    width: 100%;
   }
 
   .about__text p {
