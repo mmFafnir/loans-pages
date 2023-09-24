@@ -1512,6 +1512,25 @@ a {
   width: calc(100% + 40px);
   height: 224%;
   opacity: 0;
+  -webkit-appearance: none;
+}
+
+.range__slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range__slider input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .range-sliderthumb {
