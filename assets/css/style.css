@@ -496,7 +496,6 @@ a {
 }
 
 .modal__wrapper {
-  overflow: hidden;
   padding: 39px 20px;
   margin: 0px 40px;
   -webkit-box-flex: 0;
@@ -1501,6 +1500,7 @@ a {
 }
 
 .range__slider input {
+  -webkit-appearance: none;
   cursor: pointer;
   position: absolute;
   left: 50%;
@@ -1512,7 +1512,6 @@ a {
   width: calc(100% + 40px);
   height: 224%;
   opacity: 0;
-  -webkit-appearance: none;
 }
 
 .range__slider input::-webkit-slider-thumb {
@@ -2847,6 +2846,7 @@ section.text-block p {
 
   .range__slider input {
     width: 100%;
+    height: 510%;
   }
 
   .about__text p {
