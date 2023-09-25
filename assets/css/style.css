@@ -1508,7 +1508,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 4;
   width: calc(100% + 40px);
   height: 224%;
   opacity: 0;
