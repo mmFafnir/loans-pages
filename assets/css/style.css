@@ -2849,6 +2849,11 @@ section.text-block p {
     height: 55px;
   }
 
+  .range-sliderthumb img {
+    width: 141%;
+    height: 141%;
+  }
+
   .range__slider input {
     width: 100%;
     height: 510%;
