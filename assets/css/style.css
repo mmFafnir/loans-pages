@@ -1444,12 +1444,22 @@ a {
           align-items: center;
 }
 
-.range__input {
+.range__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 48px;
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 15px 2px rgba(0, 0, 0, 0.4) inset;
           box-shadow: 0px 1px 15px 2px rgba(0, 0, 0, 0.4) inset;
   border-radius: 10px;
-  min-width: 180px;
+  padding: 0px 10px;
+}
+
+.range__input {
   height: 52px;
   font-size: 36px;
   font-weight: 600;
@@ -1462,7 +1472,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 48px;
   position: relative;
   display: flex;
   align-items: center;
@@ -1472,7 +1481,9 @@ a {
 
 .range__input input {
   width: 89px;
+  height: 100%;
   text-align: center;
+  padding-right: 5px;
 }
 
 .range__input::after {
@@ -1547,7 +1558,7 @@ a {
 }
 
 .range.default .range__input {
-  opacity: 0.6;
+  opacity: 0.3;
   pointer-events: none;
 }
 
@@ -1580,39 +1591,29 @@ a {
 }
 
 .range-button {
-  width: 80px;
-  height: 32px;
-  background-color: rgba(0, 0, 0, 0.3254901961);
-  margin-top: 50px;
-  border-radius: 20px;
+  width: 45px;
+  height: 28px;
+  background-color: transparent;
+  border: solid 3px rgba(0, 0, 0, 0.3019607843);
+  border-radius: 17px;
   position: relative;
   overflow: hidden;
-}
-
-.range-button::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #73A7FC;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  opacity: 0;
+  margin-left: 10px;
 }
 
 .range-button span {
   cursor: pointer;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.3019607843);
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 1px;
+  left: 3px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   z-index: 1;
@@ -1623,11 +1624,12 @@ a {
 }
 
 .range-button input:checked + span {
-  left: calc(100% - 31px);
+  left: calc(100% - 21px);
+  background-color: #82AB73;
 }
 
-.range-button.active::after {
-  opacity: 1;
+.range-button.active {
+  border-color: #82AB73;
 }
 
 .about {
@@ -2375,6 +2377,12 @@ section.text-block p {
 
 .page-404__img img {
   width: 100%;
+}
+
+@media (min-width: 701px) {
+  .our-products-form .range .customrange {
+    width: calc(100% + 20px);
+  }
 }
 
 @media (min-width: 901px) {
