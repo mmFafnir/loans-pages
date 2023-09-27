@@ -321,7 +321,6 @@ a {
 }
 
 .template-page h1 {
-  max-width: 880px;
   font-size: 28px;
   margin-bottom: 36px;
 }
@@ -540,6 +539,7 @@ a {
 }
 
 #popup-get #omForm-root {
+  display: block !important;
   margin-top: 0;
 }
 
@@ -551,6 +551,11 @@ a {
   height: auto !important;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+#omFormLoader,
+#omForm-root {
+  display: none;
 }
 
 .breadcrumbs {
@@ -1461,6 +1466,8 @@ a {
   position: relative;
   display: flex;
   align-items: center;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .range__input input {
@@ -1497,6 +1504,8 @@ a {
   height: 20px;
   width: 100%;
   position: relative;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .range__slider input {
@@ -1532,6 +1541,16 @@ a {
   cursor: pointer;
 }
 
+.range.default .range__slider {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.range.default .range__input {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .range-sliderthumb {
   pointer-events: none;
   z-index: 0;
@@ -1558,6 +1577,57 @@ a {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.range-button {
+  width: 80px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.3254901961);
+  margin-top: 50px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.range-button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #73A7FC;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  opacity: 0;
+}
+
+.range-button span {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 1px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  z-index: 1;
+}
+
+.range-button input {
+  display: none;
+}
+
+.range-button input:checked + span {
+  left: calc(100% - 31px);
+}
+
+.range-button.active::after {
+  opacity: 1;
 }
 
 .about {
@@ -2847,11 +2917,6 @@ section.text-block p {
   .range-sliderthumb {
     width: 55px;
     height: 55px;
-  }
-
-  .range-sliderthumb img {
-    width: 141%;
-    height: 141%;
   }
 
   .range__slider input {
