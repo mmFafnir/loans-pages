@@ -1411,15 +1411,6 @@ a {
   height: 70%;
 }
 
-.our-products-acc__icon.active {
-  background-color: #73A7FC;
-}
-
-.our-products-acc__icon.active::before,
-.our-products-acc__icon.active::after {
-  background-color: #fff;
-}
-
 .our-products-acc__icon.active::after {
   opacity: 0;
 }
