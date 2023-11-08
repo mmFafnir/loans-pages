@@ -3071,6 +3071,10 @@ section.text-block p {
   margin-bottom: 20px;
 }
 
+.post-page__content > ol {
+  margin-left: 0;
+}
+
 .post-page__right > div {
   height: 100%;
   position: relative;
@@ -3341,7 +3345,24 @@ section.text-block p {
 .page-404 {
   background: linear-gradient(179deg, #FFEFC2 40.88%, #FFF 93.7%);
   padding-top: 50px;
-  padding-bottom: 57px;
+}
+
+.page-404 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page-404 .flex .btn:first-child {
+  margin-right: 20px;
 }
 
 .page-404__content {
@@ -3371,6 +3392,52 @@ section.text-block p {
 
 .page-404__img img {
   width: 100%;
+}
+
+.page-404__categories {
+  margin-top: 80px;
+  background: #FFDA72;
+  padding: 62px 0px;
+}
+
+.page-404__categories .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page-404__item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  max-width: 180px;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.page-404__item h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.page-404__item > a {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 12px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .loans-table {
@@ -4314,6 +4381,18 @@ section.text-block p {
   .categories-question {
     overflow: hidden;
   }
+
+  .page-404 .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .page-404 .flex .btn:first-child {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -4653,7 +4732,7 @@ section.text-block p {
   }
 
   .post-page__text ol {
-    margin-left: 20px;
+    margin-left: 0px;
   }
 
   .post-page__date {
