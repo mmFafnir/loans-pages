@@ -575,6 +575,13 @@ a {
           transform: translateY(0px);
 }
 
+.modal-close {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 .modal-link-active {
   font-weight: 700 !important;
 }
