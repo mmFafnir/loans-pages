@@ -310,7 +310,7 @@ a {
   content: "";
   z-index: -1;
   position: absolute;
-  background: linear-gradient(179deg, #FFEFC2 40.88%, #FFF 93.7%);
+  background: linear-gradient(179deg, #ffefc2 40.88%, #fff 93.7%);
   width: 100%;
   height: 160px;
   right: 0;
@@ -325,7 +325,7 @@ a {
   content: "";
   z-index: -1;
   position: absolute;
-  background: linear-gradient(179deg, #FFEFC2 40.88%, #FFF 93.7%);
+  background: linear-gradient(179deg, #ffefc2 40.88%, #fff 93.7%);
   width: 100%;
   height: 369px;
   right: 0;
@@ -340,7 +340,7 @@ a {
   content: "";
   z-index: -1;
   position: absolute;
-  background: linear-gradient(179deg, #FFEFC2 40.88%, #FFF 93.7%);
+  background: linear-gradient(179deg, #ffefc2 40.88%, #fff 93.7%);
   width: 100%;
   height: 112px;
   right: 0;
@@ -366,6 +366,18 @@ a {
 
 .template-page .title {
   font-size: 50px;
+}
+
+.date-block {
+  font-size: 14px;
+}
+
+.date-block p {
+  margin-right: 10px;
+}
+
+.date-block p span:first-child {
+  margin-right: 5px;
 }
 
 .btn {
@@ -1142,6 +1154,13 @@ a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 10px;
@@ -1151,6 +1170,17 @@ a {
 .blog-item .blog-item-flex p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.blog-item .date-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+}
+
+.blog-item .date-block p {
+  margin-right: 10px !important;
 }
 
 .blog-item__img {
@@ -1381,6 +1411,16 @@ a {
 .blog-slide .blog-item-flex p:first-child span {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.blog-slide .date-block {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 12px;
 }
 
 .our-products-form {
@@ -3204,6 +3244,15 @@ section.text-block p {
   margin-bottom: 24px;
 }
 
+.post-page__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .post-page__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3359,6 +3408,10 @@ section.text-block p {
 
 .blog-page__content > div {
   position: relative;
+}
+
+.blog-page .blog-page-categories {
+  margin-left: 20px;
 }
 
 .blog-page-categories {
