@@ -1992,6 +1992,23 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 25px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.header__btn-mob {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header__btn-mob .btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .header nav {
@@ -2771,7 +2788,7 @@ a {
 }
 
 .blog {
-  padding-top: 116px;
+  margin-bottom: 100px;
 }
 
 .blog h2 {
@@ -2803,7 +2820,7 @@ a {
   padding: 0px 20px;
   height: 27px;
   border-radius: 10px;
-  background: #FFBD00;
+  background: #ffbd00;
   margin-bottom: 5px;
   margin-right: 5px;
   font-size: 14px;
@@ -2891,6 +2908,7 @@ a {
 
 .our-products {
   padding-top: 125px;
+  margin-bottom: 116px;
 }
 
 .our-products__wrapper {
@@ -3016,7 +3034,7 @@ section.text-block p {
 }
 
 .blog-slider {
-  margin-bottom: 120px;
+  margin-bottom: 20px;
   padding: 0px 10px;
   position: relative;
   -webkit-box-orient: vertical;
@@ -3691,6 +3709,10 @@ section.text-block p {
   margin: 0px 10px 40px 10px;
   text-align: center;
   overflow: hidden;
+}
+
+.person-card a {
+  display: block;
 }
 
 .person-card__img {
@@ -4706,6 +4728,10 @@ section.text-block p {
     height: auto;
   }
 
+  .our-products {
+    margin-bottom: 90px;
+  }
+
   .our-products__body > div {
     margin: 0px;
     margin-bottom: 10px;
@@ -4904,25 +4930,72 @@ section.text-block p {
     border-radius: 10px;
   }
 
+  .header-parent {
+    height: 78px;
+  }
+
+  .header {
+    height: 78px;
+  }
+
   .header__wrapper > div {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .header__left {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   .header__logo {
+    width: 204px;
     margin-right: 0;
-    margin-bottom: 5px;
+    overflow: hidden;
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+  }
+
+  .header__logo img {
+    width: 204px;
+  }
+
+  .header__btn-mob {
+    margin-left: 5px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header__btn-mob .btn {
+    min-width: 140px;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 0px;
+    opacity: 0;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+
+  .header__btn-mob.show .btn {
+    opacity: 1;
   }
 
   .header .btn {
@@ -4931,6 +5004,18 @@ section.text-block p {
 
   .header-fixed {
     height: 70px;
+  }
+
+  .new-header-fixed .header__logo {
+    width: 40px;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+
+  .new-header-fixed .header__btn-mob .btn {
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+    opacity: 1;
   }
 
   .first-screen__text p {
@@ -5393,17 +5478,17 @@ section.text-block p {
     max-height: 95px;
   }
 
-  .header-parent {
-    height: 104px;
-  }
-
-  .header {
-    height: 104px;
-  }
-
   .header__logo {
     width: 184px;
     margin-bottom: 0px;
+  }
+
+  .header__logo img {
+    width: 184px;
+  }
+
+  .header__btn-mob .btn {
+    height: 36px;
   }
 
   .header-fixed {
