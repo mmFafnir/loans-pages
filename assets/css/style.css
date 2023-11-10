@@ -3690,6 +3690,7 @@ section.text-block p {
           flex: 0 1 calc(25% - 20px);
   margin: 0px 10px 40px 10px;
   text-align: center;
+  overflow: hidden;
 }
 
 .person-card__img {
@@ -3700,7 +3701,7 @@ section.text-block p {
   margin-bottom: 10px;
   overflow: hidden;
   position: relative;
-  padding-top: 108%;
+  padding-top: 100%;
 }
 
 .person-card__img img {
@@ -3709,6 +3710,8 @@ section.text-block p {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   top: 0;
   left: 0;
 }
@@ -4097,6 +4100,12 @@ section.text-block p {
 
   .contacts-page__links a:hover svg path {
     stroke: #73A7FC;
+  }
+
+  .person-card:hover .person-card__img img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
   }
 
   .post-page-next a:hover svg path {
