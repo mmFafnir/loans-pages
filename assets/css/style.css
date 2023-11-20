@@ -2031,6 +2031,44 @@ a {
   visibility: visible;
 }
 
+#modal-leave .modal__wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 560px;
+          flex: 0 1 560px;
+}
+
+.modal-leave-open {
+  display: none;
+}
+
+.modal-leave__body {
+  max-width: 415px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal-leave__body h3 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.modal-leave__body p {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.modal-leave__body img {
+  max-width: 279px;
+  margin-bottom: 30px;
+}
+
+.modal-leave__body .btn {
+  width: 100%;
+  max-width: none;
+  font-weight: 500;
+}
+
 .header-parent {
   height: 114px;
 }
@@ -3240,10 +3278,25 @@ section.text-block p {
 }
 
 .cookies .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 39px;
   font-weight: 400;
   border-color: #fff;
   line-height: 140%;
+}
+
+.cookies .more svg {
+  margin-left: 5px;
+}
+
+.cookies .more svg path {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .cookies__btns {
@@ -3322,49 +3375,6 @@ section.text-block p {
   }
 }
 
-.text-scroll-block {
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.3);
-  margin-bottom: 100px;
-  padding: 40px;
-  padding-right: 20px;
-}
-
-.text-scroll-block__wrapper {
-  font-size: 14px;
-  max-height: 460px;
-}
-
-.text-scroll-block__wrapper > div {
-  max-height: inherit;
-  padding-right: 20px;
-}
-
-.text-scroll-block .simplebar-track::before {
-  content: "";
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  background-color: #a6a6a6;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.text-scroll-block .simplebar-scrollbar {
-  cursor: pointer !important;
-  background-color: #ffd06c;
-  border-radius: 4px;
-  width: 11px;
-}
-
-.text-scroll-block .simplebar-scrollbar::before {
-  display: none;
-}
-
 .text-more-block {
   border-radius: 20px;
   -webkit-box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.3);
@@ -3374,22 +3384,50 @@ section.text-block p {
 }
 
 .text-more-block__wrapper {
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
-}
-
-.text-more-block__wrapper:not(.active) {
-  height: 460px !important;
+  max-height: 452px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .text-more-block button {
   display: block;
   margin-top: 20px;
   font-size: 16px;
-  line-height: 1.5;
-  text-decoration: underline;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  color: #828282;
+  border-color: #828282;
+}
+
+.text-more-block h2,
+.text-more-block h3,
+.text-more-block h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.text-more-block h2:first-child,
+.text-more-block h3:first-child,
+.text-more-block h4:first-child {
+  margin-top: 0;
+}
+
+.text-more-block h2,
+.text-more-block h3 {
+  font-size: 32px;
+  text-align: left;
+}
+
+.text-more-block p,
+.text-more-block ul,
+.text-more-block ol {
+  margin-bottom: 10px;
+}
+
+.text-more-block li {
+  font-weight: 500;
 }
 
 .footer {
@@ -4177,7 +4215,7 @@ section.text-block p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: linear-gradient(179deg, #FFEFC2 40.88%, #FFF 93.7%);
+  background: linear-gradient(179deg, #ffefc2 40.88%, #fff 93.7%);
   padding-top: 50px;
 }
 
@@ -4236,32 +4274,17 @@ section.text-block p {
 
 .page-404__categories {
   margin-top: 80px;
-  background: #FFDA72;
+  background: #ffda72;
   padding: 62px 0px;
 }
 
 .page-404__categories .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-columns: 139px;
+     -moz-columns: 139px;
+          columns: 139px;
 }
 
-.page-404__item {
-  margin-right: 20px;
-  margin-bottom: 20px;
-  max-width: 180px;
-  overflow: hidden;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.page-404__item h3 {
+.page-404__categories h3 {
   font-size: 20px;
   margin-bottom: 20px;
   width: 100%;
@@ -4270,7 +4293,7 @@ section.text-block p {
   text-overflow: ellipsis;
 }
 
-.page-404__item > a {
+.page-404__categories a {
   display: block;
   font-size: 18px;
   margin-bottom: 12px;
@@ -4455,6 +4478,10 @@ section.text-block p {
     border-color: #73A7FC;
   }
 
+  .cookies .more:hover svg path {
+    fill: #73A7FC;
+  }
+
   .cookies__btns .btn:last-child:hover {
     background-color: transparent;
     border-color: #73A7FC;
@@ -4462,6 +4489,7 @@ section.text-block p {
 
   .text-more-block button:hover {
     color: #73A7FC;
+    border-color: #73A7FC;
   }
 
   .footer__geo:hover path {
@@ -4856,6 +4884,11 @@ section.text-block p {
 
   .other-sum h2 {
     font-size: 42px;
+  }
+
+  .text-more-block h2,
+  .text-more-block h3 {
+    font-size: 24px;
   }
 
   .post-page__wrapper {
@@ -5310,6 +5343,25 @@ section.text-block p {
     border-radius: 10px;
   }
 
+  .modal-leave__body h3 {
+    font-size: 25px;
+    margin-bottom: 0px;
+  }
+
+  .modal-leave__body p {
+    font-size: 18px;
+  }
+
+  .modal-leave__body img {
+    max-width: 150px;
+  }
+
+  .modal-leave__body .btn {
+    font-size: 16px;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
   .header-parent {
     height: 78px;
   }
@@ -5518,10 +5570,16 @@ section.text-block p {
     margin-left: 0;
   }
 
-  .text-scroll-block {
+  .text-more-block {
     padding: 20px;
     padding-right: 10px;
     border-radius: 15px;
+    margin-bottom: 70px;
+  }
+
+  .text-more-block h2,
+  .text-more-block h3 {
+    font-size: 22px;
   }
 
   .footer__item {
@@ -6037,6 +6095,11 @@ section.text-block p {
     -webkit-transform: scale(-1, 1) translate(0px);
         -ms-transform: scale(-1, 1) translate(0px);
             transform: scale(-1, 1) translate(0px);
+  }
+
+  .text-more-block h2,
+  .text-more-block h3 {
+    font-size: 18px;
   }
 
   .footer__nav {
