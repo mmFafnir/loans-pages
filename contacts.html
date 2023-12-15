@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/simplebar.min.css?_v=20231120163517"/>
-    <link rel="stylesheet" href="./assets/css/swiper.min.css?_v=20231120163517" />
-    <link rel="stylesheet" href="./assets/css/style.min.css?_v=20231120163517" />
+    <link rel="stylesheet" href="./assets/css/simplebar.min.css?_v=20231215191706"/>
+    <link rel="stylesheet" href="./assets/css/swiper.min.css?_v=20231215191706" />
+    <link rel="stylesheet" href="./assets/css/style.min.css?_v=20231215191706" />
 
        <!-- Open Graph protocol -->
        <link rel="canonical" href="https://pr-cy.ru/news/p/10116-rasshirennyy-snippet-v-google--chto-eto-i-kak-sdelat" />
@@ -663,35 +663,25 @@
         </div>
     </div>
 </div>
-<div class="modal" id="popup-get">
-    <div class="modal__wrapper">
-        <div class="modal__content">
-            <iframe srcdoc="<!DOCTYPE html>
-                <html>
-                <head>
-                  <title>Форма</title>
-                  <style>
-                    #omForm-root {  
-                        display: block !important;
-                        margin-top: 0;
-                        > div{
-                           min-height: auto !important;
-                        }
-                    }
-                    .omForm-wrapper{
-                        height: auto !important;
-                        padding-top: 0;
-                        padding-bottom: 0;
-                    }
-                  </style>
-                </head>
-                <body>
-                  <script src='https://cdn101.zeroparallel.com/form/run.php?p=944FF0DB76E742608AE2C1787ED202A9&_v=20231120163517'></script>
-                </body>
-                </html>"></iframe>
-        </div>
+<div class="modal modal-get" id="popup-get">
+  <div class="modal__wrapper modal-get__wrapper">
+    <div class="modal-get__content">
+      <div class="hand">
+        <img src="assets/img/people/hand.png" alt="icon" />
+      </div>
+      <div class="hand">
+        <img src="assets/img/people/hand.png" alt="icon" />
+      </div>
+      <div class="modal-get__logo">
+        <img src="assets/img/logo-text.svg" />
+      </div>
+      <h3>fill out the form</h3>
+      
     </div>
+    <div class="loader"></div>
+  </div>
 </div>
+
 <div class="modal" id="question-modal">
     <div class="modal__wrapper">
         <div class="modal-close">
@@ -748,18 +738,70 @@
         </div>
     </div>
 </div>
+<a href="#modal/modal-reject"></a>
+<div class="modal modal-reject" id="modal-reject">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button class="modal-close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M24 8L8 24"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8 8L24 24"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <div class="modal-reject__body">
+        <p class="h2">REJECT</p>
+        <p>Invalid data type</p>
+        <p>Please, check all inputs on correctly and try againe</p>
+        <div class="modal-reject__img">
+          <img src="assets/img/people/reject.png" alt="people" />
+          <svg
+            width="472"
+            height="472"
+            viewBox="0 0 472 472"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="236" cy="236" r="236" fill="#FFF0C3" />
+            <circle cx="230" cy="267" r="126" fill="#FF7272" />
+          </svg>
+        </div>
+        <a href="#modal/popup-get" class="btn btn--no-shadow">GO BACK FORM</a>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>    
 
-      
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20231120163517"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20231215191706"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js?_v=20231215191706"></script>
 
-<!-- <script src="assets/js/simplebar.js?_v=20231120163517"></script> -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js?_v=20231215191706"></script>
+<script src="https://unpkg.com/imask?_v=20231215191706"></script>
+<!-- <script src="assets/js/simplebar.js?_v=20231215191706"></script> -->
 <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js?_v=20230924182717"></script>
-<!-- <script src="assets/js/swiper.js?_v=20231120163517"></script> -->
+<!-- <script src="assets/js/swiper.js?_v=20231215191706"></script> -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20230924182717"></script>
 
-
-<script src="./assets/js/app.min.js?_v=20231120163517"></script>
+<script src="./assets/js/app.min.js?_v=20231215191706"></script>
 
 </body>
 </html>
